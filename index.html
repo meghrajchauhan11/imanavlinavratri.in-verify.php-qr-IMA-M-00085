@@ -1,0 +1,1005 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#7a1f1f">
+
+    <title>
+        Player Verified - IMA Navli Navratri 2026    </title>
+    
+    <!-- Favicon -->
+	<link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        :root {
+            --primary: #7a1f1f;
+            --primary-dark: #591414;
+            --primary-light: #a53a3a;
+
+            --gold: #c89b3c;
+            --gold-light: #e7c66c;
+
+            --text: #242424;
+            --muted: #777;
+            --border: #eee;
+
+            --success: #198754;
+
+            --white: #ffffff;
+            --light-bg: #f8f5f3;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+        }
+
+        body {
+            min-height: 100vh;
+
+            font-family:
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            color: var(--text);
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    rgba(122, 31, 31, 0.10),
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at bottom right,
+                    rgba(200, 155, 60, 0.12),
+                    transparent 35%
+                ),
+                #f7f3f1;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* =====================================================
+           PAGE WRAPPER
+        ===================================================== */
+
+        .verification-page {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px;
+        }
+
+
+        /* =====================================================
+           MAIN CARD
+        ===================================================== */
+
+        .verification-card {
+            width: 100%;
+            max-width: 620px;
+
+            background: var(--white);
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            border: 1px solid rgba(122, 31, 31, 0.08);
+
+            box-shadow:
+                0 25px 70px rgba(60, 20, 20, 0.15);
+        }
+
+
+        /* =====================================================
+           CARD HEADER
+        ===================================================== */
+
+        .verification-header {
+            position: relative;
+
+            padding: 32px 25px 30px;
+
+            text-align: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary-dark),
+                    var(--primary),
+                    var(--primary-light)
+                );
+        }
+
+        .verification-header::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 4px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--gold),
+                    var(--gold-light),
+                    var(--gold),
+                    transparent
+                );
+        }
+
+
+        /* =====================================================
+           LOGO
+        ===================================================== */
+
+        .logo-wrapper {
+            max-width: 400px;
+            margin: 0 auto 18px;
+
+            background: #ffffff;
+
+            border-radius: 15px;
+
+            padding: 10px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.18);
+
+            border: 3px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .logo-wrapper img {
+            max-width: 100%;
+            max-height: 100%;
+
+            object-fit: contain;
+        }
+
+        .logo-placeholder {
+            font-size: 38px;
+            color: var(--primary);
+        }
+
+
+        /* =====================================================
+           HEADER TEXT
+        ===================================================== */
+
+        .verification-header h1 {
+            margin: 0;
+
+            font-size: 28px;
+
+            font-weight: 800;
+
+            letter-spacing: -0.4px;
+        }
+
+        .verification-header p {
+            margin: 8px 0 0;
+
+            font-size: 14px;
+
+            color: rgba(255,255,255,0.85);
+
+            letter-spacing: 0.3px;
+        }
+
+
+        /* =====================================================
+           VERIFIED ICON
+        ===================================================== */
+
+        .verified-icon {
+            width: 78px;
+            height: 78px;
+
+            margin: -39px auto 20px;
+
+            position: relative;
+            z-index: 5;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+
+            border-radius: 50%;
+
+            border: 5px solid #fff;
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.12);
+
+            color: var(--success);
+
+            font-size: 48px;
+        }
+
+
+        /* =====================================================
+           CARD BODY
+        ===================================================== */
+
+        .verification-body {
+            padding: 0 35px 35px;
+        }
+
+
+        /* =====================================================
+           QR BADGE
+        ===================================================== */
+
+        .qr-section {
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .qr-label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #999;
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+        .qr-code {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 9px;
+
+            padding: 9px 17px;
+
+            color: var(--primary);
+
+            background: #fbf6f5;
+
+            border: 1px dashed rgba(122, 31, 31, 0.35);
+
+            border-radius: 9px;
+
+            font-family: "Courier New", monospace;
+
+            font-size: 15px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           PLAYER PHOTO
+        ===================================================== */
+
+        .player-photo-wrapper {
+            width: 150px;
+            height: 150px;
+
+            margin: 0 auto 20px;
+
+            padding: 5px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--gold)
+                );
+
+            border-radius: 50%;
+
+            box-shadow:
+                0 12px 30px rgba(122, 31, 31, 0.20);
+        }
+
+        .player-photo {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 4px solid white;
+
+            background: #f5f5f5;
+        }
+
+        .player-placeholder {
+            width: 100%;
+            height: 100%;
+
+            border-radius: 50%;
+
+            border: 4px solid white;
+
+            background: #f3eeee;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #aaa;
+
+            font-size: 50px;
+        }
+
+
+        /* =====================================================
+           PLAYER NAME
+        ===================================================== */
+
+        .player-name {
+            margin: 0;
+
+            color: #222;
+
+            font-size: 27px;
+
+            font-weight: 800;
+
+            text-align: center;
+        }
+
+        .player-type {
+            margin: 7px 0 18px;
+
+            text-align: center;
+
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+
+        /* =====================================================
+           APPROVED BADGE
+        ===================================================== */
+
+        .approved-badge {
+            display: flex;
+
+            width: max-content;
+
+            margin: 0 auto;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 9px 20px;
+
+            border-radius: 50px;
+
+            color: #116b42;
+
+            background: #e9f8ef;
+
+            border: 1px solid #c8ecd7;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        /* =====================================================
+           INFORMATION BOX
+        ===================================================== */
+
+        .info-box {
+            margin-top: 28px;
+
+            padding: 5px 18px;
+
+            border-radius: 15px;
+
+            background: #fafafa;
+
+            border: 1px solid #eeeeee;
+        }
+
+        .info-row {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            padding: 14px 0;
+
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-label {
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            color: #888;
+
+            font-size: 13px;
+
+            font-weight: 600;
+        }
+
+        .info-label i {
+            width: 18px;
+
+            color: var(--primary);
+
+            text-align: center;
+        }
+
+        .info-value {
+            color: #333;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            text-align: right;
+        }
+
+
+        /* =====================================================
+           VERIFICATION MESSAGE
+        ===================================================== */
+
+        .verification-message {
+            margin-top: 25px;
+
+            padding: 15px 18px;
+
+            border-radius: 12px;
+
+            background: #f9f5f4;
+
+            border-left: 4px solid var(--primary);
+
+            color: #666;
+
+            font-size: 13px;
+
+            line-height: 1.6;
+        }
+
+        .verification-message i {
+            margin-right: 6px;
+
+            color: var(--primary);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .page-footer {
+            padding: 0 20px 25px;
+
+            text-align: center;
+
+            color: #999;
+
+            font-size: 12px;
+        }
+
+        .page-footer strong {
+            color: var(--primary);
+        }
+
+
+        /* =====================================================
+           ERROR CARD
+        ===================================================== */
+
+        .error-card {
+            width: 100%;
+            max-width: 500px;
+
+            padding: 45px 35px;
+
+            text-align: center;
+
+            background: white;
+
+            border-radius: 24px;
+
+            box-shadow:
+                0 25px 70px rgba(60, 20, 20, 0.15);
+
+            border: 1px solid rgba(122, 31, 31, 0.08);
+        }
+
+        .error-logo {
+            width: 80px;
+            height: 80px;
+
+            margin: 0 auto 25px;
+
+            padding: 8px;
+
+            border-radius: 50%;
+
+            background: white;
+
+            border: 2px solid #eee;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .error-logo img {
+            max-width: 100%;
+            max-height: 100%;
+
+            object-fit: contain;
+        }
+
+        .error-icon {
+            width: 75px;
+            height: 75px;
+
+            margin: 0 auto 22px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #fff0f0;
+
+            color: #dc3545;
+
+            font-size: 35px;
+        }
+
+        .error-card h2 {
+            margin-bottom: 10px;
+
+            color: #222;
+
+            font-size: 25px;
+
+            font-weight: 800;
+        }
+
+        .error-card p {
+            margin: 0 auto;
+
+            max-width: 390px;
+
+            color: #777;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           HOME BUTTON
+        ===================================================== */
+
+        .home-button {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 9px;
+
+            margin-top: 25px;
+
+            padding: 12px 22px;
+
+            color: white;
+
+            background: var(--primary);
+
+            border: none;
+
+            border-radius: 10px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 700;
+
+            transition: all 0.25s ease;
+
+            box-shadow:
+                0 8px 20px rgba(122, 31, 31, 0.20);
+        }
+
+        .home-button:hover {
+            color: white;
+
+            background: var(--primary-dark);
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 25px rgba(122, 31, 31, 0.28);
+        }
+
+
+        /* =====================================================
+           BACK LINK
+        ===================================================== */
+
+        .back-link {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 22px;
+
+            color: var(--primary);
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 700;
+        }
+
+        .back-link:hover {
+            color: var(--primary-dark);
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 575px) {
+
+            .verification-page {
+                padding: 25px 12px;
+            }
+
+            .verification-card {
+                border-radius: 20px;
+            }
+
+            .verification-header {
+                padding: 28px 18px 28px;
+            }
+
+            
+
+            .verification-header h1 {
+                font-size: 23px;
+            }
+
+            .verification-body {
+                padding: 0 20px 25px;
+            }
+
+            .verified-icon {
+                width: 70px;
+                height: 70px;
+
+                margin-top: -35px;
+
+                font-size: 42px;
+            }
+
+            .player-photo-wrapper {
+                width: 130px;
+                height: 130px;
+            }
+
+            .player-name {
+                font-size: 23px;
+            }
+
+            .info-box {
+                padding: 3px 14px;
+            }
+
+            .info-row {
+                align-items: flex-start;
+                flex-direction: column;
+
+                gap: 5px;
+            }
+
+            .info-value {
+                text-align: left;
+                padding-left: 27px;
+            }
+
+            .error-card {
+                padding: 35px 22px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="verification-page">
+
+    
+        <!-- =================================================
+             VERIFIED PLAYER
+        ================================================== -->
+
+        <div class="verification-card">
+
+            <!-- HEADER -->
+
+            <div class="verification-header">
+
+                <div class="logo-wrapper">
+
+                    <img src="assets\logo.png" alt="IMA Navli Navratri Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+                    <i class="fas fa-building logo-placeholder" style="display:none;"></i>
+
+                </div>
+
+                <h1>
+                    Player Verification
+                </h1>
+
+                <p>
+                    IMA Navli Navratri 2026
+                </p>
+
+            </div>
+
+
+            <!-- BODY -->
+
+            <div class="verification-body">
+
+                <!-- VERIFIED ICON -->
+
+                <!--<div class="verified-icon">
+                    <i class="fas fa-check"></i>
+                </div>-->
+
+
+                <!-- QR CODE -->
+
+                <div class="qr-section">
+
+                    <span class="qr-label">
+                        Verification Code
+                    </span>
+
+                    <span class="qr-code">
+
+                        <i class="fas fa-qrcode"></i>
+
+                        IMA-M-00087
+                    </span>
+
+                </div>
+
+
+                <!-- PLAYER PHOTO -->
+
+                <div class="player-photo-wrapper">
+
+                    
+                        <img src="assets\Photo.jpg" class="player-photo" alt="Player Photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+
+                        <div class="player-placeholder" style="display:none;">
+                            <i class="fas fa-user"></i>
+                        </div>
+
+                    
+                </div>
+
+
+                <!-- PLAYER NAME -->
+
+                <h2 class="player-name">
+
+                    Meghraj Chauhan
+                </h2>
+
+
+                <!-- PLAYER TYPE -->
+
+                
+                    <div class="player-type">
+
+                        Male Donor Player
+                    </div>
+
+                
+
+                <!-- APPROVED -->
+
+                <div class="approved-badge">
+
+                    <i class="fas fa-circle-check"></i>
+
+                    VERIFIED &amp; APPROVED
+
+                </div>
+
+
+                <!-- INFORMATION -->
+
+                <div class="info-box">
+
+                    <div class="info-row">
+
+                        <div class="info-label">
+                            <i class="fas fa-user"></i>
+                            Player Name
+                        </div>
+
+                        <div class="info-value">
+
+                            Meghraj Chauhan
+                        </div>
+
+                    </div>
+
+
+                    
+                        <div class="info-row">
+
+                            <div class="info-label">
+                                <i class="fas fa-id-badge"></i>
+                                Player Type
+                            </div>
+
+                            <div class="info-value">
+
+                                Male Donor Player
+                            </div>
+
+                        </div>
+
+                    
+
+                    <div class="info-row">
+
+                        <div class="info-label">
+                            <i class="fas fa-qrcode"></i>
+                            QR Code
+                        </div>
+
+                        <div class="info-value">
+
+                            IMA-M-00087
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-row">
+
+                        <div class="info-label">
+                            <i class="fas fa-circle-check"></i>
+                            Status
+                        </div>
+
+                        <div class="info-value" style="color:#198754;">
+                            APPROVED
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- VERIFICATION MESSAGE -->
+
+                <div class="verification-message">
+
+                    <i class="fas fa-shield-halved"></i>
+
+                    This player registration has been successfully
+                    verified and approved by
+                    <strong>IMA Navli Navratri</strong>.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="page-footer">
+
+    <strong>IMA Navli Navratri 2026</strong>
+
+    <br>
+
+    Official Player Verification System
+
+</div>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'sg2plzcpnl508724'},{'dcenter':'sg2'},{'cp_id':'10987523'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="https://img1.wsimg.com/traffic-assets/js/tccl.min.js"></script></body></html>
